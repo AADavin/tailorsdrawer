@@ -1,2 +1,2 @@
-# tailorsdrawer
+# Tailor's drawer
 **Un cajón de sastre** (a tailor's drawer) is a Spanish expression to mean a place or a container where you put all the things that do not fit anywhere else. Having said that, I guess that it must be clear what the content of this repository is...
