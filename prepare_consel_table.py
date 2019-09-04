@@ -28,6 +28,7 @@ trees = {x.split("_")[1]:set() for x in recs_files}
 for rec in recs_files:
     h = rec.split("_")
     rec, fam = h[1], h[2]
+    fam = fam.split(".")[0]
     trees[rec].add(fam)
 
 sharedrecs = set.intersection(*trees.values())
