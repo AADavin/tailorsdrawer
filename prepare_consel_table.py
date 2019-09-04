@@ -16,7 +16,7 @@ _, dir = args
 def extract_ll(rec_file):
     with open(rec_file) as f:
         for l in f:
-            if l.startswith(">logl")
+            if l.startswith(">logl"):
                 ll = l.split(":")[-1].strip()
                 return ll
 
