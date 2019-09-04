@@ -45,8 +45,8 @@ with open("./likelihoods_table", "w") as f:
             line.append(extract_ll(rec_file))
             head = "".join(head) + "\n"
             line = " ".join(line) + "\n"
-            f.write(head)
-            f.write(line)
+        f.write(head)
+        f.write(line)
 
 
 
