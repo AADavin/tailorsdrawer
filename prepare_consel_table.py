@@ -22,7 +22,7 @@ for rec in recs_files:
     rec, fam = h[1], h[2]
     trees[rec].add(fam)
 
-tt = set.intersection(trees)
+tt = set.intersection(*trees.values())
 
 
 
