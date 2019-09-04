@@ -23,6 +23,14 @@ for rec in recs_files:
     trees[rec].add(fam)
 
 tt = set.intersection(*trees.values())
+print(len(tt))
+
+
+
+
+
+
+
 
 
 
