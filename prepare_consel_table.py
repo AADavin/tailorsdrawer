@@ -13,6 +13,14 @@ if len(args) == 0:
 
 _, dir = args
 
+def extract_ll(rec_file):
+    with open(rec_file) as f:
+        for l in f:
+            if l.startswith(">logl")
+                ll = l.split(":")[-1].strip()
+                return ll
+
+
 recs_files = [x for x in os.listdir(dir) if x.endswith("uml_rec")]
 
 trees = {x.split("_")[1]:set() for x in recs_files}
@@ -22,8 +30,35 @@ for rec in recs_files:
     rec, fam = h[1], h[2]
     trees[rec].add(fam)
 
-tt = set.intersection(*trees.values())
-print(len(tt))
+sharedrecs = set.intersection(*trees.values())
+sharedrecsordered = list(sharedrecs)
+
+with open("./likelihoods_table", "w") as f:
+    f.write("\t".join([str(len(trees)), str(len(sharedrecsordered))]) + "\n")
+    for tree, fams in trees.items():
+        head = list()
+        line = list()
+        head.append(tree)
+        for fam in sharedrecsordered:
+            rec_file = os.path.join(dir, "SpeciesTree_TREE_FAM.faa.aln.trimmed.ufboot.corrected.ale.uml_rec".replace("TREE", tree).replace("FAM",fam))
+            line.append(extract_ll(rec_file))
+            head = "".join(head) + "\n"
+            line = " ".join(line) + "\n"
+            f.write(head)
+            f.write(line)
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
