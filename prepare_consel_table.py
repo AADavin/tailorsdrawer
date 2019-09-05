@@ -39,7 +39,7 @@ with open("./likelihoods_table", "w") as f:
     for tree, fams in trees.items():
         head = list()
         line = list()
-        head.append(tree)
+        head.append("#" + tree)
         for fam in sharedrecsordered:
             rec_file = os.path.join(dir, "SpeciesTree_TREE_FAM.faa.aln.trimmed.ufboot.corrected.ale.uml_rec".replace("TREE", tree).replace("FAM",fam))
             line.append(extract_ll(rec_file))
