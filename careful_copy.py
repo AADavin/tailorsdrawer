@@ -11,10 +11,11 @@ def careful_copy(inpath, outpath, extension):
 
 
 args = sys.argv
-if len(args) == 0:
+if len(args) == 1:
     print("Usage: python careful_copy.py inpath outpath extension")
 else:
     _, inpath, outpath, extension = args
+    careful_copy(inpath, outpath, extension)
 
 
 
