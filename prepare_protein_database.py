@@ -26,7 +26,7 @@ with open("./AllProteins.fasta", "w") as f1:
                     f1.write(seq + "\n")
                     f3.write(msp + "_" + mseq + "\t" + h + "\n")
                     seqn +=1
-            sp += 1
+                sp += 1
 
 
 
