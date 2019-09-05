@@ -1,7 +1,12 @@
 from drawer import fasta_parser
-
 import os
 import sys
+
+
+# This scripts receives a path to a folder with annotated proteins (ending in _gene.faa)
+# and produces three useful files: A single file with all the proteins
+# A mapping between the prodigal names and the new sequence names
+# A mapping between the accessions and the species
 
 _, path = sys.argv
 
