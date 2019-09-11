@@ -31,7 +31,15 @@ for rec in recs_files:
     fam = fam.split(".")[0]
     trees[rec].add(fam)
 
-sharedrecs = set.intersection(*trees.values())
+mtrees = dict()
+for tree in trees:
+    if len(trees[tree]) < 6000:
+        continue
+    else:
+        mtrees[tree] = trees[tree]
+
+
+sharedrecs = set.intersection(*mtrees.values())
 sharedrecsordered = list(sharedrecs)
 
 with open("./likelihoods_table", "w") as f:
