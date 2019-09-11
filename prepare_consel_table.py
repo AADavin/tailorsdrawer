@@ -44,7 +44,7 @@ sharedrecsordered = list(sharedrecs)
 
 with open("./likelihoods_table", "w") as f:
     f.write("\t".join([str(len(trees)), str(len(sharedrecsordered))]) + "\n")
-    for tree, fams in trees.items():
+    for tree, fams in mtrees.items():
         head = list()
         line = list()
         head.append("#" + tree)
