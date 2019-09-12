@@ -20,6 +20,6 @@ else:
         mtriplet = mold.replace("A1",h1).replace("A2",h2).replace("A3",h3)
         with open(os.path.join(outpath, triplet + ".nwk"), "w") as f:
             f.write(mtriplet)
-    
+
 
 
