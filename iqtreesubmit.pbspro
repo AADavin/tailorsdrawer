@@ -1,0 +1,9 @@
+#!/bin/bash
+#
+#PBS -A UQ-SCI-SCMB
+#PBS -N comtest
+#PBS -l select=1:ncpus=6:mem=8GB:vmem=8GB,walltime=02:00:00
+
+# Now do some things
+#PBS -J 1-1607
+/90days/uqadavin/All/x$PBS_ARRAY_INDEX
